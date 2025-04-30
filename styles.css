@@ -1,6 +1,42 @@
-.carousel-item {
-  height: 50vh;
+/* Carousel Container */
+#bgCarousel {
+  width: 100%; /* Full width */
+  height: 50vh !important; /* Fixed height (adjust as needed) */
+  margin: 0 auto; /* Center carousel */
 }
-.carousel-inner img {
-  object-fit: contain;
+
+/* Background Image Setup */
+.bg-slide-1 {
+  background-image: url("https://i.pinimg.com/originals/98/93/72/9893728175883eab848c049abd2fb5e0.jpg");
+}
+.bg-slide-2 {
+  background-image: url("https://www.worldatlas.com/r/w1200/upload/11/67/e5/shutterstock-587276981.jpg");
+}
+.bg-slide-3 {
+  background-image: url("https://vignette.wikia.nocookie.net/hobbitlotrtrilogy/images/e/e4/Lorien.png/revision/latest?cb=20170503204127");
+}
+
+.carousel-item {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Optional: Add overlay for better text visibility */
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #bgCarousel {
+    height: 300px; /* Shorter height on mobile */
+  }
 }
