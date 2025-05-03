@@ -1,29 +1,22 @@
-/* Carousel Container */
-#bgCarousel {
-  width: 100%; /* Full width */
-  height: 50vh !important; /* Fixed height (adjust as needed) */
-  margin: 0 auto; /* Center carousel */
-}
+/* Optional: Add overlay for better text visibility */
 
-/* Background Image Setup */
-.bg-slide-1 {
-  background-image: url("images/Lorien.jpg");
+.carousel {
+  width: 100%;
+  height: 75vh;
+  position: absolute;
+  top: 55px;
 }
-.bg-slide-2 {
-  background-image: url("images/rivendell.jpg");
-}
-.bg-slide-3 {
-  background-image: url("images/theshire.jpg");
-}
-
+.carousel-inner,
 .carousel-item {
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
-/* Optional: Add overlay for better text visibility */
+.carousel img {
+  width: 100% !important;
+  height: 75vh !important;
+  object-fit: fill !important;
+}
+
 .carousel-item::before {
   content: "";
   position: absolute;
@@ -32,11 +25,4 @@
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  #bgCarousel {
-    height: 300px; /* Shorter height on mobile */
-  }
 }
